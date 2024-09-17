@@ -22,11 +22,11 @@ pub(crate) mod prepared_commit;
 mod segment_entry;
 mod segment_manager;
 mod segment_register;
-pub(crate) mod segment_serializer;
-pub(crate) mod segment_updater;
-pub(crate) mod segment_writer;
+pub mod segment_serializer;
+pub mod segment_updater;
+pub mod segment_writer;
 pub(crate) mod single_segment_index_writer;
-mod stamper;
+pub mod stamper;
 
 use crossbeam_channel as channel;
 use smallvec::SmallVec;

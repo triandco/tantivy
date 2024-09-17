@@ -60,7 +60,7 @@ pub(crate) fn save_metas(metas: &IndexMeta, directory: &dyn Directory) -> crate:
 // We voluntarily pass a merge_operation ref to guarantee that
 // the merge_operation is alive during the process
 #[derive(Clone)]
-pub(crate) struct SegmentUpdater(Arc<InnerSegmentUpdater>);
+pub struct SegmentUpdater(Arc<InnerSegmentUpdater>);
 
 impl Deref for SegmentUpdater {
     type Target = InnerSegmentUpdater;
@@ -249,7 +249,7 @@ pub fn merge_filtered_segments<T: Into<Box<dyn Directory>>>(
     Ok(merged_index)
 }
 
-pub(crate) struct InnerSegmentUpdater {
+pub struct InnerSegmentUpdater {
     // we keep a copy of the current active IndexMeta to
     // avoid loading the file every time we need it in the
     // `SegmentUpdater`.
@@ -261,7 +261,7 @@ pub(crate) struct InnerSegmentUpdater {
     merge_thread_pool: ThreadPool,
 
     index: Index,
-    segment_manager: SegmentManager,
+    pub segment_manager: SegmentManager,
     merge_policy: RwLock<Arc<dyn MergePolicy>>,
     killed: AtomicBool,
     stamper: Stamper,
