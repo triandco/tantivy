@@ -4,7 +4,7 @@ use crate::postings::recorder::{DocIdRecorder, TermFrequencyRecorder, TfAndPosit
 use crate::postings::PostingsWriter;
 use crate::schema::{Field, FieldEntry, FieldType, IndexRecordOption, Schema};
 
-pub(crate) struct PerFieldPostingsWriter {
+pub struct PerFieldPostingsWriter {
     per_field_postings_writers: Vec<Box<dyn PostingsWriter>>,
 }
 
