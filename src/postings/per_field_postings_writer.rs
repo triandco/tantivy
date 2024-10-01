@@ -19,11 +19,11 @@ impl PerFieldPostingsWriter {
         }
     }
 
-    pub(crate) fn get_for_field(&self, field: Field) -> &dyn PostingsWriter {
+    pub fn get_for_field(&self, field: Field) -> &dyn PostingsWriter {
         self.per_field_postings_writers[field.field_id() as usize].as_ref()
     }
 
-    pub(crate) fn get_for_field_mut(&mut self, field: Field) -> &mut dyn PostingsWriter {
+    pub fn get_for_field_mut(&mut self, field: Field) -> &mut dyn PostingsWriter {
         self.per_field_postings_writers[field.field_id() as usize].as_mut()
     }
 }
