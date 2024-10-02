@@ -4,7 +4,7 @@ use crate::indexer::path_to_unordered_id::PathToUnorderedId;
 
 /// IndexingContext contains all of the transient memory arenas
 /// required for building the inverted index.
-pub(crate) struct IndexingContext {
+pub struct IndexingContext {
     /// The term index is an adhoc hashmap,
     /// itself backed by a dedicated memory arena.
     pub term_index: ArenaHashMap,
