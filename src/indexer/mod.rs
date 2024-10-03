@@ -26,7 +26,7 @@ pub(crate) mod segment_serializer;
 pub(crate) mod segment_updater;
 pub(crate) mod segment_writer;
 pub(crate) mod single_segment_index_writer;
-mod stamper;
+pub mod stamper;
 
 use crossbeam_channel as channel;
 use smallvec::SmallVec;
