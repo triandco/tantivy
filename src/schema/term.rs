@@ -41,7 +41,7 @@ impl Term {
         Term(data)
     }
 
-    pub(crate) fn with_type_and_field(typ: Type, field: Field) -> Term {
+    pub fn with_type_and_field(typ: Type, field: Field) -> Term {
         let mut term = Self::with_capacity(8);
         term.set_field_and_type(field, typ);
         term
