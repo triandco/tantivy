@@ -41,13 +41,14 @@ impl Term {
         Term(data)
     }
 
-    pub fn with_type_and_field(typ: Type, field: Field) -> Term {
+    pub(crate) fn with_type_and_field(typ: Type, field: Field) -> Term {
         let mut term = Self::with_capacity(8);
         term.set_field_and_type(field, typ);
         term
     }
 
-    fn with_bytes_and_field_and_payload(typ: Type, field: Field, bytes: &[u8]) -> Term {
+    /// Make public for manual term construction
+    pub fn with_bytes_and_field_and_payload(typ: Type, field: Field, bytes: &[u8]) -> Term {
         let mut term = Self::with_capacity(bytes.len());
         term.set_field_and_type(field, typ);
         term.0.extend_from_slice(bytes);
