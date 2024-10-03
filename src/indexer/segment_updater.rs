@@ -256,7 +256,7 @@ pub fn merge_filtered_segments<T: Into<Box<dyn Directory>>>(
     Ok(merged_index)
 }
 
-pub(crate) struct InnerSegmentUpdater {
+pub struct InnerSegmentUpdater {
     // we keep a copy of the current active IndexMeta to
     // avoid loading the file every time we need it in the
     // `SegmentUpdater`.
