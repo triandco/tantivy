@@ -62,7 +62,7 @@ pub(crate) fn save_metas(metas: &IndexMeta, directory: &dyn Directory) -> crate:
 // We voluntarily pass a merge_operation ref to guarantee that
 // the merge_operation is alive during the process
 #[derive(Clone)]
-pub(crate) struct SegmentUpdater(Arc<InnerSegmentUpdater>);
+pub struct SegmentUpdater(Arc<InnerSegmentUpdater>);
 
 impl Deref for SegmentUpdater {
     type Target = InnerSegmentUpdater;

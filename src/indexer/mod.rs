@@ -23,7 +23,7 @@ mod segment_entry;
 mod segment_manager;
 mod segment_register;
 pub(crate) mod segment_serializer;
-pub(crate) mod segment_updater;
+pub mod segment_updater;
 pub(crate) mod segment_writer;
 pub(crate) mod single_segment_index_writer;
 pub mod stamper;

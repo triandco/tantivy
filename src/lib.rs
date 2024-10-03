@@ -235,7 +235,7 @@ pub use crate::index::{
     note = "Will be removed in tantivy 0.23. Use export from indexer module instead"
 )]
 pub use crate::indexer::PreparedCommit;
-pub use crate::indexer::{IndexWriter, SingleSegmentIndexWriter};
+pub use crate::indexer::{IndexWriter, SingleSegmentIndexWriter, stamper::Stamper, segment_updater::SegmentUpdater};
 pub use crate::postings::Postings;
 pub use crate::schema::{DateOptions, DateTimePrecision, Document, TantivyDocument, Term};
 
