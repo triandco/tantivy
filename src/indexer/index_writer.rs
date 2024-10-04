@@ -66,7 +66,7 @@ pub struct IndexWriter<D: Document = TantivyDocument> {
     index_writer_status: IndexWriterStatus<D>,
     operation_sender: AddBatchSender<D>,
 
-    segment_updater: SegmentUpdater,
+    pub segment_updater: SegmentUpdater,
 
     worker_id: usize,
 
