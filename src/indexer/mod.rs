@@ -17,7 +17,7 @@ mod merge_operation;
 pub(crate) mod merge_policy;
 pub(crate) mod merger;
 mod merger_sorted_index_test;
-pub(crate) mod operation;
+pub mod operation;
 pub(crate) mod prepared_commit;
 mod segment_entry;
 mod segment_manager;
